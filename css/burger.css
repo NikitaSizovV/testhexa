@@ -1,0 +1,53 @@
+.menu-toggle {
+    display: block;
+      font-size: 0;
+      background: none;
+      border: none;
+      width: 30px;
+      height: 25px;
+      position: relative;
+  }
+  
+  .menu-toggle,
+  .menu-toggle:before,
+  .menu-toggle:after {
+    border-top: 3px solid #fff;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+  }
+  
+  .menu-toggle:before,
+  .menu-toggle:after {
+      position: absolute;
+      content: "";
+      display: block;
+      left: 0;
+      right: 0;
+  }
+  
+  .menu-toggle:before {
+      top: 7px;
+  }
+  
+  .menu-toggle:after {
+      top: 17px;
+  }
+  
+  .menu-toggle.toggled-on {
+      border-top-color: transparent;
+  }
+  
+  .menu-toggle.toggled-on:after {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 9px;
+  }
+  
+  .menu-toggle.toggled-on:before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 9px;
+  }

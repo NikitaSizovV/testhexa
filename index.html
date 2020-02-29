@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/compiled/concat.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="wrapper">
+            <div class="info header__info">
+                <div class="logo info__logo">
+                    <img class="logo__img" src="img/logo.png" alt="">
+                </div>
+                <div class="info__text">
+                    <h2 class="info__text_h2">Фабрика фотообоев в Киеве<br>изготовление фотообоев</h2>
+                </div>
+            </div>
+            <div class="callback header__callback">
+                <div class="callback__phone">
+                    <span>044 278 21 00</span>
+                </div>
+                <div class="button button_small">Обратный звонок</div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="wrapper">
+                <div class="menu__item_mobile">
+                    <span class="menu-toggle">toggle menu</span>
+                    <a href="#">меню</a>
+                </div>
+                <div class="menu__item"><a href="#">Главная</a>></div>
+                <div class="menu__item"><a href="#">Для детской</a></div>
+                <div class="menu__item"><a href="#">Для спальни</a></div>
+                <div class="menu__item"><a href="#">для кухни</a></div>
+                <div class="menu__item"><a href="#">Контакты</a></div>
+                
+                
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="wrapper slider__wrapper">
+                    <div class="slider__info slider__info_tang">
+                        <div class="tang tang_biggest">
+                            <div class="tang_insert tang_title">
+                                <p>Фотообои</p>
+                            </div>
+                            <div class="row">
+                                <div class="tang_insert tang__description">
+                                    <p id="name">Для зала</p>
+                                </div>
+                                <div class="tang_insert tang_green">
+                                    <p>от <span id="price">50</span> $/м<sup>2</sup></p>
+                                </div>
+
+                            </div>
+                        </div><br>
+                        <span class="text">
+                            Более 6000 идей фотообоев</span><br>
+                        <span class="text" id="name-sec">для зала</span>
+                        <div class="button button_big">Смотреть кухни</div>
+                        <div class="slider-control">
+                            <div class="slider-control__button slider-control__button_prev"></div>
+                            <div class="pagination"></div>
+                            <div class="slider-control__button slider-control__button_next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-1">
+
+                    </div>
+                    <div class="swiper-slide swiper-slide-2">
+
+                    </div>
+                    <div class="swiper-slide swiper-slide-3">
+
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper row footer__wrapper">
+            <div class="footer__item">
+                <div class="item__icon">
+                    <img src="img/print.png" alt="">
+
+                </div>
+                <div class="item__text">
+                    <p class="item__title">Печатаем что угодно</p>
+                    <p class="item__description">
+                        Все фотообои мы изготавливаем под заказ на собственном оборудовании. По этому можем напечатать
+                        совершенно все,
+                        что вы захотите</p>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="item__icon">
+                    <img src="img/size.png" alt="">
+                </div>
+                <div class="item__text">
+                    <p class="item__title">Любые размеры
+                    </p>
+                    <p class="item__description">Профессиональное оборудование позволяет напечатать фотообои совершенно
+                        любого размера. Можем заклеить как часть, таки все стену без ограничений.
+                    </p>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="item__icon">
+                    <img src="img/calendar.png" alt="">
+                </div>
+                <div class="item__text">
+                    <p class="item__title">Изготовление за 1 день
+                    </p>
+                    <p class="item__description">В среднем, изготовление одних фотообоев среднего размера занимает не
+                        более одного дня!
+                    </p>
+                </div>
+            </div>
+            <div class="footer__item">
+                <div class="item__icon">
+                    <img src="img/nodeleg.png" alt="">
+
+                </div>
+                <div class="item__text">
+                    <p class="item__title">Без посредников
+                    </p>
+                    <p class="item__description">Мы имеем в наличие все необходимое оборудование для самостоятельного
+                        изготовления фотообоев. А значит вы не переплачиваете посредникам.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            speed: 600,
+            autoplay: {
+                delay: 6000
+            },
+            allowTouchMove: false,
+            loop: true,
+            navigation: {
+                nextEl: '.slider-control__button_next',
+                prevEl: '.slider-control__button_prev'
+            },
+            pagination: {
+                el: '.pagination',
+                type: 'bullets',
+                bulletElement: 'span',
+                clickable: true,
+                bulletClass: 'bullet',
+                bulletActiveClass: 'bullet_active'
+            }
+
+        })
+        swiper.on('slideChange', function () {
+            let names = ['для гостиной', 'для кухни', 'для спальни'],
+                prices = ['50', '60', '70'],
+                index = swiper.realIndex,
+                name = document.getElementById("name"),
+                nameSec = document.getElementById("name-sec"),
+                price = document.getElementById("price");
+
+            name.classList.add('fade-out');
+            price.classList.add('fade-out');
+            nameSec.classList.add('fade-out');
+
+            setTimeout(() => {
+                name.innerHTML = names[index];
+                nameSec.innerHTML = names[index];
+                price.innerHTML = prices[index];
+                name.classList.remove('fade-out');
+                price.classList.remove('fade-out');
+                nameSec.classList.remove('fade-out');
+                name.classList.add('fade-in');
+                price.classList.add('fade-in');
+                nameSec.classList.add('fade-in');
+            }, 600);
+
+
+            console.log(index);
+        });
+        let burger = document.querySelector('.menu-toggle')
+            menu = document.querySelectorAll('.menu__item')
+            k = menu.length;
+        
+        burger.onclick = function(){
+            burger.classList.toggle('toggled-on');
+            for (let i = 0; i<k; i++ ) {
+                menu[i].classList.toggle('show')
+            }
+        };
+
+
+
+
+    </script>
+</body>
+
+</html>

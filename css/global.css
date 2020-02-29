@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Proxima';
+  src: url("../../fonts/ProximaNova-Regular.woff2") format("woff"); }
+
+@font-face {
+  font-family: 'Intro';
+  src: url("../../fonts/Intro-Book.woff") format("woff"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.wrapper {
+  max-width: 1115px;
+  width: 100%;
+  margin: auto; }
+
+.button {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ff4f58), to(#fd7048));
+  background-image: -o-linear-gradient(bottom, #ff4f58 0%, #fd7048 100%);
+  background-image: linear-gradient(to top, #ff4f58 0%, #fd7048 100%);
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Proxima';
+  cursor: pointer; }
+  .button:hover {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#fd7048), to(#ff4f58));
+    background-image: -o-linear-gradient(bottom, #fd7048 0%, #ff4f58 100%);
+    background-image: linear-gradient(to top, #fd7048 0%, #ff4f58 100%); }
+  .button_small {
+    height: 30px;
+    width: 140px;
+    font-size: 13px;
+    line-height: 29px; }
+  .button_big {
+    margin-top: 25px;
+    width: 225px;
+    height: 45px;
+    text-transform: uppercase;
+    line-height: 45px;
+    border: 2px solid #ffffff; }
